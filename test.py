@@ -10,6 +10,22 @@ conexion = mysql.connector.connect(
 
 if conexion.is_connected():
     print("conexion exitosa a MySQL")
-    conexion.close()
 else:
     print("Error al conectar con MySQL")
+
+# CREAMOS EL CURSOR
+cursor = conexion.cursor()
+
+#EJECUTAR LA CONSULTA
+cursor.execute("select Name, population FROM city LIMIT 5")
+
+# ODTENER LOS RESULTADOS
+resultados = cursor.fetchall()
+
+#IMPRIMIR LOS RESULTADOS
+for ciudad in resultados:
+    print(ciudad)
+
+#CERRAMOS EL CURSOR Y LA CONECCION
+cursor.close()
+conexion.close()
