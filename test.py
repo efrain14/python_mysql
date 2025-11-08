@@ -17,7 +17,7 @@ else:
 cursor = conexion.cursor()
 
 #EJECUTAR LA CONSULTA
-cursor.execute("select Name, population FROM city LIMIT 5")
+cursor.execute("select Name, population FROM city LIMIT 10")
 
 # ODTENER LOS RESULTADOS
 resultados = cursor.fetchall()
