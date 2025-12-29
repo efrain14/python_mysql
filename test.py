@@ -19,7 +19,7 @@ cursor = conexion.cursor()
 #EJECUTAR LA CONSULTA
 cursor.execute("select Name, population FROM city LIMIT 10")
 
-# ODTENER LOS RESULTADOS
+# OBTENER LOS RESULTADOS DE LA CONSULTA
 resultados = cursor.fetchall()
 
 #IMPRIMIR LOS RESULTADOS
